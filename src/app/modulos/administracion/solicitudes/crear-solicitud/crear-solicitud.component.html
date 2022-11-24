@@ -1,1 +1,39 @@
-<p>crear-solicitud works!</p>
+<div class="row">
+    <h4 class="center-align">Adicionar Solicitud</h4>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="GuardarSolicitud()">
+            <input type="hidden" formControlName="id" />
+            <div class="input-field">
+                <label for="tipoSolicitud">Tipo Solicitud</label>
+                <input formControlName="tipoSolicitud" type="text" name="tipoSolicitud" id="tipoSolicitud" required/>
+            </div>
+            <div class="input-field">
+                <label for="fechaSolicitud">fecha Solicitud</label>
+                <input formControlName="fechaSolicitud" type="date" name="fechaSolicitud" id="fechaSolicitud" required/>
+            </div>
+            <div class="input-field">
+                <label for="clienteId">Cliente</label>
+                <input formControlName="clienteId" type="text" name="clienteId" id="clienteId" required/>
+            </div>
+            <div class="input-field">
+                <label for="vehiculoId">Vehículo</label>
+                <input formControlName="vehiculoId" type="text" name="vehiculoId" id="vehiculoId" required/>
+            </div>
+            <div class="input-field">
+                <label for="estado">estado</label>
+                <input formControlName="estado" type="text" name="estado" id="estado" required/>
+            </div>
+            <div class="input-field">
+                <label for="comentarios">comentarios</label>
+                <input formControlName="comentarios" type="text" name="comentarios" id="comentarios" required/>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>Adicionar
+                </button>
+            </p>
+        </form>
+
+    </article>
+</div>

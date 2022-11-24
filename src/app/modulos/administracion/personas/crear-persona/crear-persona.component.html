@@ -1,1 +1,43 @@
-<p>crear-persona works!</p>
+<div class="row">
+    <h4 class="center-align">Adicionar Usuario</h4>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="GuardarPersona()">
+            <input type="hidden" formControlName="id" />
+            <div class="input-field">
+                <label for="nombres">Nombres</label>
+                <input formControlName="nombres" type="text" name="nombres" id="nombres" required/>
+            </div>
+            <div class="input-field">
+                <label for="apellidos">apellidos</label>
+                <input formControlName="apellidos" type="text" name="apellidos" id="apellidos" required/>
+            </div>
+            <div class="input-field">
+                <label for="identificacion">Identificación</label>
+                <input formControlName="identificacion" type="text" name="identificacion" id="identificacion" required/>
+            </div>
+            <div class="input-field">
+                <label for="direccion">Dirección</label>
+                <input formControlName="direccion" type="text" name="direccion" id="direccion" required/>
+            </div>
+            <div class="input-field">
+                <label for="correo">correo</label>
+                <input formControlName="correo" type="text" name="correo" id="correo" required/>
+            </div>
+            <div class="input-field">
+                <label for="celular">celular</label>
+                <input formControlName="celular" type="text" name="celular" id="celular" required/>
+            </div>
+            <div class="input-field">
+                <label for="rol">rol</label>
+                <input formControlName="rol" type="text" name="rol" id="rol" required/>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>Adicionar
+                </button>
+            </p>
+        </form>
+
+    </article>
+</div>

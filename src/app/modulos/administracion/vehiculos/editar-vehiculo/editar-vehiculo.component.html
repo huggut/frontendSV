@@ -1,1 +1,67 @@
-<p>editar-vehiculo works!</p>
+<div class="row">
+    <h4 class="center-align">Editar Vehículo</h4>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarVehiculo()">
+            <input type="hidden" formControlName="id" />
+            <div class="input-field">
+                <label for="placa" class="active">Placa</label>
+                <input formControlName="placa" type="text" name="placa" id="placa" required/>
+            </div>
+            <div class="input-field">
+                <label for="descripcion" class="active">Descripcion</label>
+                <input formControlName="descripcion" type="text" name="descripcion" id="descripcion" required/>
+            </div>
+            <div class="input-field">
+                <label for="tipoVehiculo" class="active">Tipo Vehículo</label>
+                <input formControlName="tipoVehiculo" type="text" name="tipoVehiculo" id="tipoVehiculo" required/>
+            </div>
+            <div class="input-field">
+                <label for="tipoOferta" class="active">Tipo Oferta</label>
+                <input formControlName="tipoOferta" type="text" name="tipoOferta" id="tipoOferta" required/>
+            </div>
+            <div class="input-field">
+                <label for="precio" class="active">Precio</label>
+                <input formControlName="precio" type="text" name="precio" id="precio" required/>
+            </div>
+            <div class="input-field">
+                <label for="departamento" class="active">Departamento</label>
+                <input formControlName="departamento" type="text" name="departamento" id="departamento" required/>
+            </div>
+            <div class="input-field">
+                <label for="ciudad" class="active">Ciudad</label>
+                <input formControlName="ciudad" type="text" name="ciudad" id="ciudad" required/>
+            </div>
+            <div class="input-field">
+                <label for="imagen" class="active">Imagen</label>
+                <input formControlName="imagen" type="text" name="imagen" id="imagen" required/>
+            </div>
+            <div class="input-field">
+                <label for="estado" class="active">Estado</label>
+                <input formControlName="estado" type="text" name="estado" id="estado" required/>
+            </div>
+            <div class="input-field">
+                <label for="asesorId" class="active">Asesor Id</label>
+                <input formControlName="asesorId" type="text" name="asesorId" id="asesorId" required/>
+            </div>
+            <div class="input-field">
+                <label for="nombreEncargado" class="active">Encargado</label>
+                <input formControlName="nombreEncargado" type="text" name="nombreEncargado" id="nombreEncargado" required/>
+            </div>
+            <div class="input-field">
+                <label for="correoEncargado" class="active">Correo</label>
+                <input formControlName="correoEncargado" type="text" name="correoEncargado" id="correoEncargado" required/>
+            </div>
+            <div class="input-field">
+                <label for="celularEncargado" class="active">Celular</label>
+                <input formControlName="celularEncargado" type="text" name="celularEncargado" id="celularEncargado" required/>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>Guardar Cambios
+                </button>
+            </p>
+        </form>
+
+    </article>
+</div>

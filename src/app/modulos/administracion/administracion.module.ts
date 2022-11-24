@@ -6,14 +6,15 @@ import { CrearPersonaComponent } from './personas/crear-persona/crear-persona.co
 import { EditarPersonaComponent } from './personas/editar-persona/editar-persona.component';
 import { EliminarPersonaComponent } from './personas/eliminar-persona/eliminar-persona.component';
 import { BuscarPersonaComponent } from './personas/buscar-persona/buscar-persona.component';
-import { CrearVehiculoComponent } from './productos/crear-vehiculo/crear-vehiculo.component';
-import { BuscarVehiculoComponent } from './productos/buscar-vehiculo/buscar-vehiculo.component';
-import { EditarVehiculoComponent } from './productos/editar-vehiculo/editar-vehiculo.component';
-import { EliminarVehiculoComponent } from './productos/eliminar-vehiculo/eliminar-vehiculo.component';
-import { CrearSolicitudComponent } from './pedidos/crear-solicitud/crear-solicitud.component';
-import { EditarSolicitudComponent } from './pedidos/editar-solicitud/editar-solicitud.component';
-import { BuscarSolicitudComponent } from './pedidos/buscar-solicitud/buscar-solicitud.component';
-import { EliminarSolicitudComponent } from './pedidos/eliminar-solicitud/eliminar-solicitud.component';
+import { CrearVehiculoComponent } from './vehiculos/crear-vehiculo/crear-vehiculo.component';
+import { BuscarVehiculoComponent } from './vehiculos/buscar-vehiculo/buscar-vehiculo.component';
+import { EditarVehiculoComponent } from './vehiculos/editar-vehiculo/editar-vehiculo.component';
+import { EliminarVehiculoComponent } from './vehiculos/eliminar-vehiculo/eliminar-vehiculo.component';
+import { CrearSolicitudComponent } from './solicitudes/crear-solicitud/crear-solicitud.component';
+import { EditarSolicitudComponent } from './solicitudes/editar-solicitud/editar-solicitud.component';
+import { BuscarSolicitudComponent } from './solicitudes/buscar-solicitud/buscar-solicitud.component';
+import { EliminarSolicitudComponent } from './solicitudes/eliminar-solicitud/eliminar-solicitud.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +34,9 @@ import { EliminarSolicitudComponent } from './pedidos/eliminar-solicitud/elimina
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

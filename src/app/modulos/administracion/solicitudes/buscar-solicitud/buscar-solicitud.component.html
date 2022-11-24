@@ -1,1 +1,53 @@
-<p>buscar-solicitud works!</p>
+<a class="btn" routerLink="/administracion/crear-solicitud/">Crear Solicitud</a>
+<table class="table-responsive">
+    <thead>
+        <tr>
+            <th>
+                Tipo Solicitud
+            </th>
+            <th>
+                Fecha
+            </th>
+            <th>
+                Cliente Id
+            </th>
+            <th>
+                Vehiculo Id
+            </th>
+            <th>
+                Estado solicitud
+            </th>
+            <th>
+                Comentarios
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>
+                {{p.tipoSolicitud}}
+            </td>
+            <td>
+                {{p.fechaSolicitud}}
+            </td>
+            <td>
+                {{p.clienteId}}
+            </td>
+            <td>
+                {{p.vehiculoId}}
+            </td>
+            <td>
+                {{p.estado}}
+            </td>
+            <td>
+                {{p.comentarios}}
+            </td>
+            <td>
+                <a class="btn" routerLink="/administracion/editar-solicitud/{{p.id}}">Editar</a>
+            </td>
+            <td>
+                <a class="btn" routerLink="/administracion/eliminar-solicitud/{{p.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

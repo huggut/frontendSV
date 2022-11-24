@@ -1,1 +1,39 @@
-<p>editar-solicitud works!</p>
+<div class="row">
+    <h4 class="center-align">Editar Solicitud</h4>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarSolicitud()">
+            <input type="hidden" formControlName="id" />
+            <div class="input-field">
+                <label for="tipoSolicitud" class="active">Tipo Solicitud</label>
+                <input formControlName="tipoSolicitud" type="text" name="tipoSolicitud" id="tipoSolicitud" required/>
+            </div>
+            <div class="input-field">
+                <label for="fechaSolicitud" class="active">Fecha Solicitud</label>
+                <input formControlName="fechaSolicitud" type="text" name="fechaSolicitud" id="fechaSolicitud" required/>
+            </div>
+            <div class="input-field">
+                <label for="clienteId" class="active">Cliente</label>
+                <input formControlName="clienteId" type="text" name="clienteId" id="clienteId" required/>
+            </div>
+            <div class="input-field">
+                <label for="vehiculoId" class="active">Vehículo</label>
+                <input formControlName="vehiculoId" type="text" name="vehiculoId" id="vehiculoId" required/>
+            </div>
+            <div class="input-field">
+                <label for="estado" class="active">estado</label>
+                <input formControlName="estado" type="text" name="estado" id="estado" required/>
+            </div>
+            <div class="input-field">
+                <label for="comentarios" class="active">comentarios</label>
+                <input formControlName="comentarios" type="text" name="comentarios" id="comentarios" required/>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>Guardar Cambios
+                </button>
+            </p>
+        </form>
+
+    </article>
+</div>

@@ -1,1 +1,77 @@
-<p>buscar-vehiculo works!</p>
+<a class="btn" routerLink="/administracion/crear-vehiculo/">Crear vehículo</a>
+<table class="table-responsive">
+    <thead>
+        <tr>
+            <th>
+                Placa
+            </th>
+            <th>
+                descripción
+            </th>
+            <th>
+                Tipo Vehículo
+            </th>
+            <th>
+                Tipo Oferta
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Departamento
+            </th>
+            <th>
+                Ciudad
+            </th>
+            <th>
+                Imagen
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Editar
+            </th>
+            <th>
+                Eliminar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>
+                {{p.placa}}
+            </td>
+            <td>
+                {{p.descripcion}}
+            </td>
+            <td>
+                {{p.tipoVehiculo}}
+            </td>
+            <td>
+                {{p.tipoOferta}}
+            </td>
+            <td>
+                {{p.precio}}
+            </td>
+            <td>
+                {{p.departamento}}
+            </td>
+            <td>
+                {{p.ciudad}}
+            </td>
+            <td>
+                <img src="{{p.imagen}}" class="imagenVehiculo"/>
+            </td>
+            <td>
+                {{p.estado}}
+            </td>
+            <td>
+                <a class="btn" routerLink="/administracion/editar-vehiculo/{{p.id}}">Editar</a>
+            </td>
+            <td>
+                <a class="btn" routerLink="/administracion/eliminar-vehiculo/{{p.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
