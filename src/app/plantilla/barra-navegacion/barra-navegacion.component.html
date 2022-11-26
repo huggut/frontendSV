@@ -1,9 +1,9 @@
 <nav>
   <div class="nav-wrapper">
-      <a routerLink="/inicio" class="brand-logo">Logo</a>
+      <a routerLink="/inicio" class="brand-logo">Smart Vehicle Company</a>
       <a routerLink="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-personas">Usuarios</a></li>
+        <li *ngIf="seInicioSesion && noCliente"><a routerLink="/administracion/listar-personas">Usuarios</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-solicitudes">Solicitudes</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-vehiculos">Vehiculos</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambio-clave">Cambiar clave</a></li>
@@ -14,7 +14,7 @@
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-  <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-personas">Usuarios</a></li>
+  <li *ngIf="seInicioSesion && noCliente"><a routerLink="/administracion/listar-personas">Usuarios</a></li>
   <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-solicitudes">Solicitudes</a></li>
   <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-vehiculos">Vehiculos</a></li>
   <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambio-clave">Cambiar clave</a></li>

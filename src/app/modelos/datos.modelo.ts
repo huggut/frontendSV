@@ -3,4 +3,5 @@ export class ModeloDatos{
     nombres?: String;
     apellidos?: String;
     correo?:String;
+    rol?: String;
 }

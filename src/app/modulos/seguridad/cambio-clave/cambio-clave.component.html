@@ -1,1 +1,43 @@
-<p>cambio-clave works!</p>
+<div class="container">
+
+
+    <form [formGroup]="fgValidador" (ngSubmit)="CambiarClave()">
+        <!-- Change The Form Method From Here-->
+        <input type="hidden" formControlName="id" />
+        <input type="hidden" formControlName="nombres" />
+        <input type="hidden" formControlName="apellidos" />
+        <input type="hidden" formControlName="identificacion" />
+        <input type="hidden" formControlName="direccion" />
+        <input type="hidden" formControlName="correo" />
+        <input type="hidden" formControlName="celular" />
+        <input type="hidden" formControlName="rol" />
+        <div class="card-panel z-depth-5">
+
+            <!-- Form Logo Section  -->
+
+            <div class="row margin">
+                <div class="col s12 m12 l12 center">
+                    <img src="https://i.imgur.com/ypAbAYt.png" alt="" class="responsive-img circle" style="width:100px;">
+                    <p>Cambio de Contraseña</p>
+                </div>
+            </div>
+
+            <!-- Form Password Input Section -->
+
+            <div class="col m12 l12">
+                <div class="input-field">
+                    <i class="material-icons prefix">lock</i>
+                    <input formControlName="clave" type="password" name="password" id="password">
+                    <label for="password">Contraseña actual</label>
+                </div>
+            </div>
+
+            <div class="center">
+                <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light grey darken-4" type="submit" name="action">Cambiar
+                    <i class="material-icons right">send</i>
+                  </button>
+            </div>
+
+        </div>
+    </form>
+</div>

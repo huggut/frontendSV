@@ -1,4 +1,4 @@
-<a class="btn" routerLink="/administracion/crear-vehiculo/">Crear vehículo</a>
+<a *ngIf="noCliente" class="btn" routerLink="/administracion/crear-vehiculo/">Crear vehículo</a>
 <table class="table-responsive">
     <thead>
         <tr>
@@ -29,10 +29,10 @@
             <th>
                 Estado
             </th>
-            <th>
+            <th *ngIf="noCliente">
                 Editar
             </th>
-            <th>
+            <th  *ngIf="noCliente">
                 Eliminar
             </th>
         </tr>
@@ -67,10 +67,10 @@
                 {{p.estado}}
             </td>
             <td>
-                <a class="btn" routerLink="/administracion/editar-vehiculo/{{p.id}}">Editar</a>
+                <a  *ngIf="noCliente" class="btn" routerLink="/administracion/editar-vehiculo/{{p.id}}">Editar</a>
             </td>
             <td>
-                <a class="btn" routerLink="/administracion/eliminar-vehiculo/{{p.id}}">Eliminar</a>
+                <a  *ngIf="noCliente" class="btn" routerLink="/administracion/eliminar-vehiculo/{{p.id}}">Eliminar</a>
             </td>
         </tr>
     </tbody>

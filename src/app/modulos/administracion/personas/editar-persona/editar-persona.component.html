@@ -3,6 +3,7 @@
     <article class="col s6 offset-s3">
         <form [formGroup]="fgValidador" (ngSubmit)="EditarPersona()">
             <input type="hidden" formControlName="id" />
+            <input type="hidden" formControlName="clave" />
             <div class="input-field">
                 <label for="nombres" class="active">nombres</label>
                 <input formControlName="nombres" type="text" name="nombres" id="nombres" required/>

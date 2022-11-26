@@ -28,10 +28,10 @@ export class VehiculoService {
 
   CrearVehiculo(vehiculo: ModeloVehiculo): Observable<ModeloVehiculo>{
     return this.http.post<ModeloVehiculo>(`${this.url}/vehiculos`, vehiculo, {
-      headers: new HttpHeaders({
-        'Authorization': `Bearer ${this.token}`
-      })
+     // headers: new HttpHeaders({
+     //   'Authorization': `Bearer ${this.token}`
     })
+    // })
   }
 
   ActualizarVehiculo(vehiculo: ModeloVehiculo): Observable<ModeloVehiculo>{

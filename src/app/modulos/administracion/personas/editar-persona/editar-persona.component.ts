@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModeloPersona } from 'src/app/modelos/persona.modelo';
 import { PersonaService } from 'src/app/servicios/persona.service';
-import { VehiculoService } from 'src/app/servicios/vehiculo.service';
 
 @Component({
   selector: 'app-editar-persona',
@@ -22,7 +21,8 @@ export class EditarPersonaComponent implements OnInit{
     'direccion': ['', [Validators.required]],
     'correo': ['', [Validators.required]],
     'celular': ['', [Validators.required]],
-    'rol': ['', [Validators.required]]
+    'rol': ['', [Validators.required]],
+    'clave': ['', [Validators.required]]
    });
   
     constructor(private fb: FormBuilder,
@@ -45,6 +45,7 @@ export class EditarPersonaComponent implements OnInit{
         this.fgValidador.controls["correo"].setValue(datos.correo);
         this.fgValidador.controls["celular"].setValue(datos.celular);
         this.fgValidador.controls["rol"].setValue(datos.rol);
+        this.fgValidador.controls["clave"].setValue(datos.clave);
       })
     }
   
@@ -56,6 +57,7 @@ export class EditarPersonaComponent implements OnInit{
       let correo = this.fgValidador.controls["correo"].value;
       let celular = this.fgValidador.controls["celular"].value;
       let rol = this.fgValidador.controls["rol"].value;
+      let clave = this.fgValidador.controls["clave"].value;
 
       let p = new ModeloPersona();
       p.nombres = nombres;
@@ -65,6 +67,7 @@ export class EditarPersonaComponent implements OnInit{
       p.correo = correo;
       p.celular =celular;
       p.rol = rol;
+      p.clave = clave;
       p.id = this.id;
   
       this.servicioPersona.ActualizarPersona(p).subscribe((datos: ModeloPersona) => {
